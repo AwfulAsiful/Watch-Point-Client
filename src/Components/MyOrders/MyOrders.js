@@ -12,7 +12,7 @@ const MyOrders = () => {
     },[user.email])
 
     const handleDeleteMyOrders=(id)=>{
-        fetch(`hhttps://lit-savannah-17178.herokuapp.com/orders/${id}`,{
+        fetch(`https://lit-savannah-17178.herokuapp.com/orders/${id}`,{
             method:'DELETE'
         })
         .then(res=>res.json())
