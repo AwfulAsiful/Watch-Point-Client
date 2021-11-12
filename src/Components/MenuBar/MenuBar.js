@@ -22,16 +22,20 @@ const MenuBar = () => {
                             Explore
                         </li>
                         </Link>
-                        <Link to='/dashboard' className='items'>
-                        <li >
-                            Dashboard
-                        </li>
-                        </Link>
+                      
                         {
                             user?.email?(
-                                <button className="btn btn-dark" onClick={logout}>
+                               <div className='d-flex'>
+                                   
+                          <Link to='/dashboard' className='items'>
+                          <li >
+                              Dashboard
+                          </li>
+                          </Link>
+                          <button className="btn btn-dark mt-2" onClick={logout}>
                             Logout
                         </button>
+                               </div>
                             ):(<Link to='/login'className="items">
                             <li>Login</li>
                         </Link>)
