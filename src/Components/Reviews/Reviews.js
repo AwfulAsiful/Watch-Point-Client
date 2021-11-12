@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Card } from 'react-bootstrap';
-
+import Rating from 'react-rating';
 const Reviews = () => {
     const [reviews, setReviews] = useState([]);
     useEffect(() => {
@@ -27,10 +27,15 @@ const Reviews = () => {
                                         </span>
                                     </h3>
                                     <p className='text-start'>{review?.comments}</p>
-                                    <h4 className="fw-bold text-warning">
-                                        <i className="fas fa-star"></i>
-                                        {review?.rating}
-                                    </h4>
+                                    <Rating
+                                        className='text-warning'
+                                        emptySymbol='far fa-star'
+                                        fullSymbol="fa fa-star"
+                                       
+                                        initialRating={review?.rating}
+                                       
+                                        readonly
+                                    />
                                 </Card.Body>
                             </Card>
                         </div>
